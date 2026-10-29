@@ -11,6 +11,6 @@ class GetUser(GetUserPort):
     async def execute(self, user_id: int) -> User:
         async with self._uow:
             user = await self._uow.users.get_by_id(user_id)
-        if not user:
-            raise UserNotFoundError(f"Пользователь с id {user_id} не найден")
+            if user is None:
+                raise UserNotFoundError
         return user

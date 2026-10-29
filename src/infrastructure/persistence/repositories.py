@@ -34,6 +34,7 @@ class SQLAlchemyUserRepository(UserRepository):
         if not user:
             return False
         await self._session.delete(user)
+        await self._session.flush()
         return True
 
 

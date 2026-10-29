@@ -6,11 +6,11 @@ class Settings(BaseSettings):
         env_file=".env", env_file_encoding="utf-8", extra="allow"
     )
 
-    postgres_host: str
-    postgres_database_name: str
-    postgres_password: str
-    postgres_port: int
-    postgres_username: str
+    postgres_host: str = ''
+    postgres_database_name: str = ''
+    postgres_password: str = ''
+    postgres_port: int = 5432
+    postgres_username: str = ''
 
     jwt_secret: str = "change-me"
     jwt_algorithm: str = "HS256"

@@ -13,3 +13,6 @@ wheels/
 .env
 
 CLAUDE.md
+
+# Pycharm
+.idea

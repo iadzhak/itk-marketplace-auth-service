@@ -25,4 +25,4 @@ jobs:
     needs: lint
     runs-on: ubuntu-latest
     steps:
-      - run: echo "TODO: implement test job"
+      - run: echo "TODO: implement test job..."
